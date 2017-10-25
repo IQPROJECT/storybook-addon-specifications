@@ -1,6 +1,10 @@
 import React from "react";
-import {mount} from "enzyme";
+import {mount, configure} from "enzyme";
 import expect from "expect";
+
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 
 const stories = storiesOf('Button - CI MOCHA Sample', module);
 
